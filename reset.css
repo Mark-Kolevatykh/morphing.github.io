@@ -1,0 +1,29 @@
+*
+{
+    margin: 0; 
+    padding: 0;
+}
+
+p
+{
+    line-height: 1.5;
+    font-size: 18;
+    font-weight: lighter;
+    text-align: justify;
+    text-indent: 47px;
+}
+
+h2
+{
+    font-size: 24;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:link, a:visited
+{
+    color: blue;
+}

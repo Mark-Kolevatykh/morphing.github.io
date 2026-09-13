@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Морфинг</title>
+        <link rel = "icon" href="png/Task5/Logo.svg" type = "image/svg">
+        <link rel = "stylesheet" href = "reset.css">
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <div class = "container">
+            <header class = "container-wrapper-margin">
+                <img src = "png/Task5/Title.svg">
+            </header>
+            <main>
+                <div class = "container-wrapper-margin">
+                    <h2>Содержание</h2>
+                    <nav>
+                        <ul>
+                            <li><a href = "#introduction">Введение</a></li>
+                            <li><a href = "#algorithms">Алгоритмы морфинга полигональных форм</a></li>
+                            <li><a href = "#experiment">Эксперимент</a></li>
+                            <li><a href = "#results">Результаты</a></li>
+                            <li><a href = "#conclusion">Заключение</a></li>
+                            <li><a href = "#bibliographyList">Библиографический список</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <section id = "introduction">
+                    <h2>Введение</h2>
+                    <p>
+                        Область технических и естественных наук, занимающаяся обработкой графической информации с помощью компьютера, получила название компьютерной графики. 
+                        Автоматизация проектирования, визуализация научных результатов и аналитических данных, обработка изображений, создание компьютерных игр и анимации – основные задачи, решаемые в данной области <a href = bibliographyList>[1]</a>. 
+                        Для создания анимации используются разные подходы. Все они требуют работы с геометрическими объектами разной топологии и формы. К таким подходам относится морфинг, преобразующий геометрические формы.
+                    </p>
+                    <p>
+                        Таким образом, проблема исследования заключается в отсутствии практических рекомендаций по выбору алгоритма морфинга для фигур с разной топологией.
+                    </p>
+                    <p>
+                        Целью курсового проекта является проведение сравнительного анализа современных алгоритмов морфинга полигонов, выявление области их применимости.
+                    </p>
+                    <p>
+                        Для достижения цели необходимо решить следующие задачи.
+                    </p>
+                    <ol>
+                        <li>Выполнить анализ предметной области.</li>
+                        <li>Реализовать алгоритмы морфинга.</li>
+                        <li>Протестировать алгоритмы на практике.</li>
+                        <li>Провести сравнительный анализ алгоритмов.</li>
+                        <li>Сделать выводы.</li>
+                    </ol> 
+                </section>
+
+                <section id = "algorithms">
+                    <h2>Алгоритмы морфинга полигональных форм</h2>
+                    <div>
+                        <ul>
+                            <li>Линейная интерполяция</li>
+                        </ul>
+                        <img src = "png/Task5/LinearInterpolation.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Барицентрические координаты</li>
+                        </ul>
+                        <img src = "png/Task5/MVC.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Векторное поле</li>
+                        </ul>
+                        <img src = "png/Task5/VektorField.png">
+                    </div>
+                </section>
+
+                <section id = "experiment">
+                    <h2>Эксперимент</h2>
+                    <div class = "algorithm-container">
+                        <div class = "linear-interpolation-algorithm-container">
+                            <label>Линейная интерполяция</label>
+                            <video src = "mp4/LinearInterpolation.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class = "MVC-algorithm-container">
+                            <label>MVC</label>
+                            <video src = "mp4/MVC.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class = "vector-field-algorithm-container">
+                            <label>Векторное поле</label>
+                            <video src = "mp4/VectorField.mp4" autoplay muted loop></video>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id = "results">
+                    <h2>Результаты</h2>
+                    <table class = "table">
+                        <thead>
+                            <tr>
+                                <th rowspan="4">Критерий</th>
+                                <th colspan = "12">Форма преобразования</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3">Выпуклый - выпуклый</th>
+                                <th colspan="3">Выпуклый - вогнутый</th>
+                                <th colspan="3">Выпуклый - сложная топология</th>
+                                <th colspan="3">Вогнутый - сложная топология</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3">квадрат - круг</th>
+                                <th colspan="3">круг - звезда</th>
+                                <th colspan="3">треугольник - медуза</th>
+                                <th colspan="3">звезда - медуза</th>
+                            </tr>
+                            <tr>
+                                <th>Лин. интерпол</th>
+                                <th>MVC</th>
+                                <th>Вект. поле</th>
+                                <th>Лин. интерпол</th>
+                                <th>MVC</th>
+                                <th>Вект. поле</th>
+                                <th>Лин. интерпол</th>
+                                <th>MVC</th>
+                                <th>Вект. поле</th>
+                                <th>Лин. интерпол</th>
+                                <th>MVC</th>
+                                <th>Вект. поле</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class = "criteria-data">1. Время выполнения преобразования</td>
+                                <td>1.66</td>
+                                <td class = "marker-data">1.75</td>
+                                <td>3.29</td>
+                                <td>1.60</td>
+                                <td>1.72</td>
+                                <td class = "marker-data">3.26</td>
+                                <td>1.67</td>
+                                <td>1.73</td>
+                                <td class = "marker-data">3.27</td>
+                                <td>1.67</td>
+                                <td>1.77</td>
+                                <td class = "marker-data">3.31</td>
+                            </tr>
+                            <tr>
+                                <td class = "criteria-data">2. Среднеквадратическое отклонение точек от прямой</td>
+                                <td>0.00</td>
+                                <td class = "marker-data">17.32</td>
+                                <td>19.34</td>
+                                <td>0.00</td>
+                                <td>2.99</td>
+                                <td class = "marker-data">3.47</td>
+                                <td>0.00</td>
+                                <td>16.08</td>
+                                <td class = "marker-data">16.70</td>
+                                <td>0.00</td>
+                                <td>12.82</td>
+                                <td class = "marker-data">14.44</td>
+                            </tr>
+                            <tr>
+                                <td class = "criteria-data">3. Коэффициент корреляции движения граничных и внутренних точек</td>
+                                <td>0.00</td>
+                                <td class = "marker-data">0.97</td>
+                                <td>0.97</td>
+                                <td>-0.08</td>
+                                <td>0.71</td>
+                                <td class = "marker-data">0.79</td>
+                                <td>0.10</td>
+                                <td>0.88</td>
+                                <td class = "marker-data">0.91</td>
+                                <td>0.22</td>
+                                <td>0.91</td>
+                                <td class = "marker-data">0.96</td>
+                            </tr>
+                            <tr>
+                                <td class = "criteria-data">4. Коэффициент сохранения формы</td>
+                                <td>0.43</td>
+                                <td class = "marker-data">0.05</td>
+                                <td>0.06</td>
+                                <td>0.45</td>
+                                <td>0.08</td>
+                                <td class = "marker-data">0.09</td>
+                                <td>0.43</td>
+                                <td>0.12</td>
+                                <td class = "marker-data">0.13</td>
+                                <td>0.41</td>
+                                <td>0.11</td>
+                                <td class = "marker-data">0.13</td>
+                            </tr>
+                            <tr>
+                                <td class = "criteria-data">5. Количество самопересечений</td>
+                                <td>98.00</td>
+                                <td class = "marker-data">0.00</td>
+                                <td>0.00</td>
+                                <td>100.00</td>
+                                <td>100.00</td>
+                                <td class = "marker-data">100.00</td>
+                                <td>100.00</td>
+                                <td>100.00</td>
+                                <td class = "marker-data">100.00</td>
+                                <td>100.00</td>
+                                <td>100.00</td>
+                                <td class = "marker-data">100.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id = "conclusion">
+                    <h2>Заключение</h2>
+                    <p>
+                        Для фигур с достаточно тривиальной топологией, в частности рамок, контуров, обводок, 
+                        лучше всего использовать алгоритм линейной интерполяции. 
+                    </p>
+                    <p>
+                        В случае, когда фигура представляет не просто полигон, а целую полигональною форму, 
+                        включающую полигон и внутреннюю область полигона, следует применять алгоритм на основе 
+                        обобщенных барицентрических координат типа MVC.
+                    </p>
+                    <p>
+                        Универсальным выбором будет алгоритм морфинга на основе векторных полей, который 
+                        обеспечивает гладкость деформации. 
+                    </p>
+                </section>
+
+                <section id = "bibliographyList">
+                    <h2>Библиографический список</h2>
+                    <ol>
+                        <li>
+                             B. Sobota Introductory Chapter: Computer and Imaging // Computer Graphics and Imaging / ed. B. Sobota. – London: IntechOpen, 2019. – P. 1-14.    
+                        </li>
+                        <li>
+                            C. Rossl, Z. Karni, H. P. Seidel, R. Zayer Vector Field Based Shape Deformations // Computer Graphics Forum. – 2013. – Vol. 32, No. 1. – P. 1-10. 
+                        </li>
+                        <li>
+                            D. Chen, Y. Sun Boundary Based Parametric Polygon Morphing // IEICE Transactions on Information and Systems. – 2001. – Vol. E84-D, No. 4. – P. 511-520 
+                        </li>
+                        <li>
+                            F. P. Preparata, M. I. Shamos Computational Geometry: An Introduction. – New York: Springer-Verlag, 1985. – XIV, 398 p. – (Texts and Monographs in Computer Science). 
+                        </li>
+                        <li>
+                            H. Ilhan, H. Gurcay Polygon Morphing and Its Application in Orebody Modeling // Mathematical Problems in Engineering. – 2012. – Vol. 2012. – Article ID 732365. – P. 1-9. 
+                        </li>
+                        <li>
+                            K. Hormann, N. Sukumar F Generalized Barycentric Coordinates in Computer Graphics and Computational Mechanics / ed. by K. Hormann, N. Sukumar. – Boca Raton: CRC Press, 2017. – XIV, 338 p. – ISBN 978-1-4987-6359-2.  
+                        </li>
+                    </ol>
+                </section>
+            </main>
+            <footer>
+                <div>
+                    <label>© 2026 Колеватых Марк Антонович (ФИ(б) - 3301-51-00)</label>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
