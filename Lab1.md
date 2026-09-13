@@ -114,3 +114,10 @@ else:
 ```
 ![png](png/Task4/my_place.png)
 ![png](png/Task4/browser_request.png)
+
+## Задание 5. Изучите базовый синтаксис, семантическую структуру и основные теги языка разметки HTML5, атакже основы CSS. Создайте веб-страницу index.html посвещённую своему проекту, например,курсовой работе. Страница должна иметь четкую структуру, содержать заголовок, текстовые абзацы,изображения, списки, таблицу и гиперссылки. Используя навыки работы с GitHub, опубликуйтесозданную статическую страницу на GitHub Pages. В отчет добавьте ссылку опубликованнойстраницы. Примеры подобных страниц:
+https://lilianweng.github.io/posts/2026-06-24-scaling-laws/
+https://landscape-of-thoughts.github.io/
+https://stepaudiollm.github.io/step-audio-editx/
+
+Ответ: https://mark-kolevatykh.github.io/morphing.github.io/
